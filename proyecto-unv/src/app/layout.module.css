@@ -1,0 +1,48 @@
+.layoutContainer {
+    display: flex;
+    min-height: 100vh;
+    padding: 1em;
+    background: linear-gradient(to right, #1e40af, #2563eb, #1e40af);
+    font-family: Arial, sans-serif;
+  }
+  
+  .contentContainer {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    border-radius: 20px;
+    border: 1px solid red;
+  }
+  
+  .sidebarLeft {
+    width: 25rem;
+    background-color: #1e3a8a;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .mainContainer {
+    display: flex;
+    flex: 1;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 1.5rem;  /* para separar el contenido del borde */
+    background-color: white; /* para diferenciar el área */
+    color: black;
+    overflow-y: auto; /* si el contenido es muy largo, activa scroll */
+    min-height: 100vh;
+  }
+  
+  .innerSidebar {
+    width: 30rem;
+    background-color: #1e3a8a;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
