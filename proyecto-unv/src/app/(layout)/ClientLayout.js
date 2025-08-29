@@ -29,7 +29,7 @@ export default function ClientLayout({ children }) {
             <Image 
               src="/santoTomasDarkBanerLogo.png" 
               alt="Universidad Santo Tomás Villavicencio" 
-              width={200}     // 👈 ajusta según se vea mejor
+              width={200}     
               height={160} 
               className={styles.sidebarLeftLogo}
               priority
