@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📚 INFORMACIÓN ACERCA DEL PROYECTO
 
-## Getting Started
+## 📌 Definición
+El proyecto consiste en realizar un **rediseño del sistema académico SAC**, descartando funciones poco esenciales y priorizando la experiencia del estudiante.  
 
-First, run the development server:
+## 👤 Información del Estudiante
+En la parte superior de la plataforma se mostrará información básica del estudiante, como:  
+- Nombre  
+- CC/TI  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏛️ Posible Header
+El header contendrá el título **SAC** y el **menú principal** con las siguientes secciones:  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📑 Menú Principal
 
-## Learn More
+### 📂 Matrícula
+- Consulta de requisitos de matrícula - Recibo de pago de matrícula y otros derechos  
+- Recibo de pago de matrícula y otros derechos  
+- Matrícula individual  
+- Turno de matrícula asignado  
+- Actualización de datos personales  
 
-To learn more about Next.js, take a look at the following resources:
+### 📂 Solicitudes
+- Reintegro de estudiante  
+- Solicitud de descuento  
+- Solicitud de novedades de notas  
+- Solicitud de certificados  
+- Solicitud de tutorías  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📂 Horarios
+- Lista de horarios del estudiante  
+- Horario de grupos por programa  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 📂 Información General
+- Consulta de estudiantes  
+- Plan de estudios individual  
+- Horario del estudiante  
+- Promedio  
+- Notas registradas  
+- Asistencia y comentarios de clase  
 
-## Deploy on Vercel
+### 🎓 Servicio de Grado
+- Solicitud de grado  
+- Cargue requisito de matrícula  
+- Programas extracurriculares para estudiantes  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Logo USTA](public/santoTomasDarkBanerLogo.png)
+
