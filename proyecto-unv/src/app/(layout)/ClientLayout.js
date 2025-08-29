@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./layout.module.css";
@@ -25,8 +26,14 @@ export default function ClientLayout({ children }) {
           </nav>
 
           <div className={styles.sidebarLeftFooter}>
-            <p>Universidad Santo Tomás</p>
-            <p>Villavicencio</p>
+            <Image 
+              src="/santoTomasDarkBanerLogo.png" 
+              alt="Universidad Santo Tomás Villavicencio" 
+              width={200}     // 👈 ajusta según se vea mejor
+              height={160} 
+              className={styles.sidebarLeftLogo}
+              priority
+            />
           </div>
         </div>            
       </aside>

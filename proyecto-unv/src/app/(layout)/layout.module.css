@@ -66,6 +66,19 @@
   margin-top: auto;
 }
 
+.sidebarLeftFooter {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.sidebarLeftLogo {
+  max-width: 100%;
+  height: auto;
+}
+
+
 .main {
   position: relative;
   display: flex;
