@@ -3,6 +3,24 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --color-gold: #febf35;
+  --color-cream: #fff9e5;
+  --color-brown: #7e6346;
+  --color-beige: #d3b89c;
+  --color-gray-dark: #444;
+
+  --brand-blue-900: #1a237e;        /* .title color */
+  --accent-gold: #f5c518;           /* subrayado .title y .postButton */
+  --accent-gold-hover: #e0b213;     /* hover del botón */
+  --scrollbar: #4753d4;             /* scrollbar-color */
+  --card-bg: #ffffff;               /* fondo .postCard (puedes usar --background si prefieres) */
+  --card-border: #eaeaea;           /* borde .postCard */
+  --tag-blue-bg: #e0ebff;           /* fondo .postTag */
+  --tag-blue-text: #2a4d9c;         /* texto .postTag */
+  --text-muted: #888;               /* .postDate */
+  --text-soft: #555;                /* .postDescription */
+  --text-soft-2: #666;              /* .postAuthor */
 }
 
 @theme inline {

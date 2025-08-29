@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import styles from "./layout.module.css"
+import ClientLayout from "./(layout)/ClientLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,60 +20,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <div className={styles.layoutContainer}>
-          <aside className={styles.sidebarLeft}>
-            <div>
-              <h1>SAC</h1>
-              <nav>
-                <a href="#">Horario Del Estudiante</a>
-                <a href="#">Matricula Individual</a>
-                <a href="#">Semaforo Del Estudiante</a>
-                <a href="#">Notas Registradas</a>
-                <a href="#">Historico De Notas</a>
-              </nav>
-            </div>
-            <div id="univ-info">
-              <p>Universidad Santo Tomás</p>
-              <p>Villavicencio</p>
-            </div>
-          </aside>
-          <div className={styles.contentContainer}>          
-            <div className={styles.mainContainer}>
-              <main id="main-content" className={styles.main}>
-                {children}              
-              </main>
-              <aside className={styles.innerSidebar}>
-                  <div>
-                    <div id="user-info">
-                      <div id="user-avatar">LC</div>
-                      <div>
-                        <p id="user-name">Lauren Castro</p>
-                        <p id="user-cc">CC: 1122515214</p>
-                      </div>
-                    </div>
-
-                    <h2>Notificaciones</h2>
-                    <ul id="notifications">
-                      <li>
-                        <strong>Evaluación Docente Pendiente</strong>
-                        <p>El periodo de evaluación docente estará habilitado...</p>
-                      </li>
-                      <li>
-                        <strong>Problemas de Inscripción</strong>
-                        <p>Hace falta el pago de la matrícula...</p>
-                      </li>
-                      <li>
-                        <strong>Estado de Solicitud</strong>
-                        <p>Su certificado de notas está disponible...</p>
-                      </li>
-                    </ul>
-                  </div>
-                  <p id="contact">Contactar al: 86614361</p>
-                </aside>
-            </div>
-          </div>
-        </div>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
