@@ -12,6 +12,41 @@ En la parte superior de la plataforma se mostrará información básica del estu
 
 ---
 
+## 🧬 Acerca de nosotros
+### ¿Quienes Somos?
+La Universidad Santo Tomás es la primera universidad de Colombia,
+fundada en 1580 por la Orden de Predicadores (Padres Dominicos). A
+lo largo de más de cuatro siglos, ha sido referente en formación
+humanista, académica y social, comprometida con el desarrollo del
+país y con la promoción de valores éticos y ciudadanos.
+
+### Nuestra misión
+Formar integralmente a profesionales y ciudadanos capaces de
+aportar al bien común mediante la investigación, la innovación, la
+extensión y la docencia, inspirados en los principios de Santo
+Tomás de Aquino: la verdad, la justicia y el servicio a la
+sociedad.
+
+### Nuestra visión
+Ser reconocida nacional e internacionalmente como una universidad
+de excelencia académica y humana, líder en investigación aplicada
+y en la generación de proyectos que transformen la realidad social,
+económica y cultural de Colombia y Latinoamérica.
+
+### Presencia nacional
+Contamos con una estructura multicampus que nos permite estar
+presentes en diferentes ciudades del país, como Bogotá,
+Bucaramanga, Medellín, Villavicencio y Tunja, además de Centros de
+Atención Universitaria en otras regiones, garantizando así un
+acceso más equitativo a la educación superior.
+
+La Universidad Santo Tomás, fiel a su lema:
+"Facientes Veritatem (Hacedores de la verdad), trabaja cada día 
+por la formación integral de profesionales comprometidos con 
+la sociedad colombiana.”
+
+---
+
 ## 🏛️ Header
 El header contendrá el título **SAC** y el **menú principal** con las siguientes secciones:  
 
