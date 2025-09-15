@@ -30,6 +30,7 @@
 }
 
 .sidebarLeftTitle {
+  color: white;
   padding-left: 3rem;
   font-size: 2rem;
   font-weight: bold;
@@ -50,6 +51,7 @@
 .sidebarLeftNav a {
   width: 100%;
   text-align: left;
+  color: white;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;

@@ -1,0 +1,54 @@
+.formContainer {
+    max-width: 480px;
+    margin: 50px auto;  /* Centrado vertical y horizontal */
+    padding: 25px 60px;
+    border: 2px solid #ffc16f;
+    border-radius: 10px;
+    background-color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio vertical entre campos */
+  }
+  
+  .formContainer > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formElementContainer {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .ingresado {
+    padding: 3px 5px;
+    font-size: 1rem;
+    border: 1.8px solid #ffc16f;
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .ingresado:focus {
+    outline: none;
+    border-color: #e6b64f;
+  }
+  
+  .submitButton {
+    background-color: #ffc16f;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 9px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .submitButton:hover {
+    background-color: #e6b64f;
+  }
+  

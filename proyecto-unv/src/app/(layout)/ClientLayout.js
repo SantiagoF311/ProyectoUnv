@@ -1,12 +1,18 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { useState } from "react";
-import Link from "next/link";
-import styles from "./layout.module.css";
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import { useState } from 'react';
+import Link from 'next/link';
+import styles from './layout.module.css';
 
 export default function ClientLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const router = useRouter();
+
+  const handleProfileClick = () => {
+    router.push('/settings');
+  };
 
   return (
     <div className={styles.layoutContainer}>
@@ -45,6 +51,14 @@ export default function ClientLayout({ children }) {
             className={styles.profileButton} 
             onMouseEnter={() => setSidebarOpen(true)}
             onMouseLeave={() => setSidebarOpen(false)}
+            onClick={handleProfileClick}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                handleProfileClick();
+              }
+            }}
           >
             LC
           </div>
