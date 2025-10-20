@@ -1,90 +1,98 @@
-import styles from "./home.module.css";
+
+import Image from 'next/image';
+import styles from './home.module.css';
 
 export default function Home() {
-  const posts = [
-    {
-      id: 1,
-      title: "Inscripciones abiertas para el curso de Excel",
-      description:
-        "Ya puedes registrarte en el curso de Excel intermedio. Cupos limitados.",
-      author: "Coordinación Académica",
-      date: "27 Ago 2025",
-      tag: "Cursos",
-    },
-    {
-      id: 2,
-      title: "Inscripciones abiertas para antiguos",
-      description:
-        "Si eres estudiante antiguo, recuerda realizar la inscripción antes del 15 de septiembre.",
-      author: "Secretaría",
-      date: "25 Ago 2025",
-      tag: "Admisiones",
-    },
-    {
-      id: 3,
-      title: "Nueva sala disponible en las instalaciones",
-      description:
-        "Se habilitó la sala de estudio 304 en el bloque C para uso libre de estudiantes.",
-      author: "Bienestar Universitario",
-      date: "20 Ago 2025",
-      tag: "Noticias",
-    },
-    {
-      id: 4,
-      title: "Convocatoria abierta para monitorías académicas",
-      description:
-        "Los estudiantes con promedio superior a 4.0 pueden aplicar hasta el 10 de septiembre.",
-      author: "Decanatura",
-      date: "18 Ago 2025",
-      tag: "Convocatorias",
-    },
-    {
-      id: 5,
-      title: "Se actualizó el reglamento estudiantil",
-      description:
-        "Consulta el nuevo reglamento estudiantil disponible en la página institucional.",
-      author: "Consejo Académico",
-      date: "15 Ago 2025",
-      tag: "Normatividad",
-    },
-    {
-      id: 6,
-      title: "Torneo interno de fútbol",
-      description:
-        "Las inscripciones para el torneo interno están abiertas hasta el 5 de septiembre.",
-      author: "Bienestar Deportivo",
-      date: "10 Ago 2025",
-      tag: "Deportes",
-    },
-    {
-      id: 7,
-      title: "Semana de la Ciencia y Tecnología",
-      description:
-        "Del 12 al 16 de septiembre se realizarán charlas y talleres con invitados internacionales.",
-      author: "Facultad de Ingeniería",
-      date: "05 Ago 2025",
-      tag: "Eventos",
-    },
-  ];
-
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Reportes importantes</h1>
-      <div className={styles.postsWrapper}>
-        {posts.map((post) => (
-          <div key={post.id} className={styles.postCard}>
-            <div className={styles.postHeader}>
-              <span className={styles.postTag}>{post.tag}</span>
-              <span className={styles.postDate}>{post.date}</span>
-            </div>
-            <h2 className={styles.postTitle}>{post.title}</h2>
-            <p className={styles.postDescription}>{post.description}</p>
-            <div className={styles.postFooter}>
-              <span className={styles.postAuthor}>✍ {post.author}</span>
-              <button className={styles.postButton}>Ver más</button>
-            </div>
+      <div className={styles.banner}>
+        <Image
+          src="/stTomas.png"
+          alt="Universidad Santo Tomás"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+        <div className={styles.bannerOverlay}>
+            <Image
+                src="/santoTomasDarkBanerLogo.png"
+                alt="Universidad Santo Tomás Villavicencio"
+                width={350}
+                height={280}
+                priority
+            />
+        </div>
+      </div>
+
+      <div className={styles.newsSection}>
+        <div className={styles.newsCard}>
+          <div className={styles.cardImage}></div>
+          <div className={styles.cardText}>
+            <h3>Noticia</h3>
+            <p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo</p>
           </div>
-        ))}
+        </div>
+        <div className={styles.newsCard}>
+          <div className={styles.cardImage}></div>
+          <div className={styles.cardText}>
+            <h3>Noticia</h3>
+            <p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo</p>
+          </div>
+        </div>
+        <div className={styles.newsCard}>
+          <div className={styles.cardImage}></div>
+          <div className={styles.cardText}>
+            <h3>Noticia</h3>
+            <p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo</p>
+          </div>
+        </div>
+        <div className={styles.newsCard}>
+          <div className={styles.cardImage}></div>
+          <div className={styles.cardText}>
+            <h3>Noticia</h3>
+            <p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo</p>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.banner}>
+        <Image
+          src="/stTomas2.png"
+          alt="Campus"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+      </div>
+
+      <div className={styles.nosotrosSection}>
+        <h2>NOSOTROS</h2>
+        <div className={styles.nosotrosContainer}>
+          <div className={styles.nosotrosCard}>
+            <h3>Misión</h3>
+            <p>
+              Formar profesionales íntegros que contribuyan al bien común mediante
+              investigación, innovación, docencia y extensión, inspirados en la
+              verdad, justicia y servicio.
+            </p>
+          </div>
+          <div className={styles.nosotrosCard}>
+            <h3>Visión</h3>
+            <p>
+              Ser universidad de excelencia reconocida en Colombia y Latinoamérica,
+              líder en investigación aplicada y proyectos que transformen la
+              sociedad.
+            </p>
+          </div>
+          <div className={styles.nosotrosCard}>
+            <h3>Presencia</h3>
+            <p>
+              Con estructura multicampus en Bogotá, Bucaramanga, Medellín,
+              Villavicencio, Tunja y centros regionales, garantiza acceso
+              equitativo a la educación superior.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
