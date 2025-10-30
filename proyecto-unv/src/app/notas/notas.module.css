@@ -1,0 +1,303 @@
+.container {
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+  background-color: var(--background);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00234E;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.searchForm {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #00234E;
+  font-size: 1.1rem;
+}
+
+.formGroup input,
+.formGroup select {
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formGroup input::placeholder {
+  color: #9aa3af; /* más oscuro en light */
+}
+
+html[data-theme="dark"] .formGroup input::placeholder {
+  color: #c7cfdb; /* más claro en dark */
+}
+
+/* Dark theme: select look & feel */
+html[data-theme="dark"] .formGroup select {
+  background-color: var(--card-bg);
+  color: #ffffff;
+  border-color: var(--card-border);
+}
+
+html[data-theme="dark"] .formGroup select:focus {
+  outline: none;
+  border-color: #3a82f6; /* resalta enfoque en dark */
+}
+
+/* Opciones del desplegable (soporte puede variar entre navegadores) */
+html[data-theme="dark"] .formGroup select option {
+  background-color: var(--card-bg);
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .formGroup select option[disabled] {
+  color: #8fa1bd;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: #00234E;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.searchButton,
+.resetButton {
+  flex: 1;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.searchButton {
+  background-color: #00234E;
+  color: white;
+  border: 2px solid #ffc107;
+}
+
+.searchButton:hover {
+  background-color: #ffc107;
+  color: #00234E;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resetButton {
+  background-color: #6c757d;
+  color: white;
+}
+
+.resetButton:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.results {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.studentInfo {
+  margin-bottom: 2rem;
+}
+
+.studentInfo h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00234E;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Dark: títulos en blanco */
+html[data-theme="dark"] .studentInfo h2 {
+  color: #ffffff;
+}
+html[data-theme="dark"] .header h1 {
+  color: #ffffff;
+}
+
+.infoCard {
+  background-color: #00234E;
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #ffc107;
+}
+
+.infoCard p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.infoCard p:last-child {
+  margin-bottom: 0;
+}
+
+.infoCard strong {
+  color: #ffc107;
+  margin-right: 0.5rem;
+}
+
+.average {
+  font-size: 1.5rem !important;
+  font-weight: 700;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid #ffc107;
+}
+
+.notasTable {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notasTable h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00234E;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background-color: #00234E;
+  color: white;
+}
+
+.table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1rem;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.notaCell {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #00234E;
+}
+
+.aprobado {
+  background-color: #28a745;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.reprobado {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .searchForm {
+    padding: 1.5rem;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .table {
+    font-size: 0.9rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+/* Dark theme overrides: textos en blanco y fondo igual al inicio */
+html[data-theme="dark"] .header h1,
+html[data-theme="dark"] .header p,
+html[data-theme="dark"] .formGroup label,
+html[data-theme="dark"] .notasTable h2,
+html[data-theme="dark"] .infoCard p,
+html[data-theme="dark"] .notaCell {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .table td {
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+html[data-theme="dark"] .table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+

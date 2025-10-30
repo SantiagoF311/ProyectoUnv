@@ -6,7 +6,26 @@
 .banner {
   position: relative;
   width: 100%;
-  height: 400px; 
+  height: 500px; 
+  margin-top: -80px;
+  z-index: 0;
+}
+
+.bannerIntermediate {
+  position: relative;
+  width: 100%;
+  height: 500px; 
+  margin-top: 0;
+  margin-bottom: 0;
+  z-index: 0;
+}
+/* Oscurecer imagen intermedia SIEMPRE igual que header (0.5) */
+.bannerIntermediate::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
 }
 
 .bannerOverlay {
@@ -17,8 +36,9 @@
   bottom: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.3); 
+  align-items: start;
+  background: rgba(0, 0, 0, 0.5); 
+  padding-top: 11rem;
 }
 
 .newsSection {
@@ -26,7 +46,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 3rem 2rem;
-  background-color: #f5f5f5;
+  background-color: var(--background);
 }
 
 @media (max-width: 900px) {
@@ -49,7 +69,7 @@
 .cardImage {
   width: 80px;
   height: 80px;
-  background-color: #f5f5f5;
+  background-color: var(--background);
   border-radius: 10px;
 }
 
@@ -65,7 +85,7 @@
 }
 
 .nosotrosSection {
-  background-color: #f5f5f5;
+  background-color: var(--background);
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
@@ -108,4 +128,168 @@
 .nosotrosCard p {
   font-size: 1rem;
   line-height: 1.6;
+}
+
+.contactSection {
+  background-color: var(--card-bg);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contactSection h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00234E;
+  margin-bottom: 2rem;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1400px;
+  width: 100%;
+  align-items: start;
+}
+
+.contactForm {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #00234E;
+  font-size: 1.2rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: #9aa3af; /* más oscuro en light */
+}
+
+html[data-theme="dark"] .formGroup input::placeholder,
+html[data-theme="dark"] .formGroup textarea::placeholder {
+  color: #c7cfdb; /* más claro en dark */
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #00234E;
+}
+
+.formGroup input.error,
+.formGroup textarea.error {
+  border-color: #d32f2f;
+}
+
+.formGroup input.error:focus,
+.formGroup textarea.error:focus {
+  border-color: #d32f2f;
+}
+
+.errorMessage {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 180px;
+}
+
+.submitButton {
+  background-color: #00234E;
+  color: white;
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  padding: 1.2rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.submitButton:hover {
+  background-color: #ffc107;
+  color: #00234E;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submitButton:disabled:hover {
+  background-color: #00234E;
+  color: white;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 900px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .contactInfo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Dark theme text overrides (no cambia colores de links) */
+html[data-theme="dark"] .nosotrosSection h2,
+html[data-theme="dark"] .contactSection h2 {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .newsSection,
+html[data-theme="dark"] .nosotrosSection,
+html[data-theme="dark"] .contactSection {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .formGroup label {
+  color: #ffffff;
 }

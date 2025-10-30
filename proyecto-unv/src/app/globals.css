@@ -37,6 +37,21 @@
   }
 }
 
+/* Explicit dark theme override via data-attribute */
+html[data-theme="dark"] {
+  /* Azulados oscuros */
+  --background: #0b1220;      /* fondo de página */
+  --foreground: #e6eaf3;      /* texto global */
+
+  --card-bg: #0f1a2a;         /* fondos de contenedores */
+  --card-border: #1f2b3e;     /* bordes suaves */
+
+  --text-muted: #a9b3c7;
+  --text-soft: #cfd6e4;
+  --text-soft-2: #bac4d6;
+  --scrollbar: #6b76ff;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

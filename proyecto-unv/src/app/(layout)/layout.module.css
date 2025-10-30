@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background-color: var(--background);
   font-family: var(--font-lato);
 }
 
@@ -12,8 +12,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #ffffff;
+  padding-left: 4.5rem;
+  background-color: var(--card-bg);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.headerTransparent {
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .headerTitle {
@@ -23,21 +31,34 @@
 
 .headerTitle a {
   text-decoration: none;
-  color: #1a237e;
+  color: var(--brand-blue-900);
+}
+
+.headerTransparent .headerTitle a {
+  color: #ffffff;
 }
 
 .headerNav {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .headerNav a {
   position: relative;
   text-decoration: none;
-  color: #333;
+  color: var(--foreground);
   font-size: 1rem;
   transition: color 0.2s ease-in-out;
   padding-bottom: 5px;
+}
+
+.headerTransparent .headerNav a {
+  color: #ffffff;
+}
+
+.headerTransparent .themeButton {
+  color: #ffffff;
 }
 
 .headerNav a::after {
@@ -47,8 +68,12 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #1a237e;
+  background-color: var(--brand-blue-900);
   transition: width 0.3s ease-in-out;
+}
+
+.headerTransparent .headerNav a::after {
+  background-color: #ffffff;
 }
 
 .headerNav a:hover::after,
@@ -59,8 +84,32 @@
 
 .headerNav a:hover,
 .activeLink {
-  color: #1a237e;
+  color: var(--brand-blue-900);
   font-weight: 700;
+}
+
+.headerTransparent .headerNav a:hover,
+.headerTransparent .activeLink {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Dark theme: links y título blancos, sin cambio de color en hover */
+html[data-theme="dark"] .headerTitle a {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .headerNav a {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .headerNav a:hover,
+html[data-theme="dark"] .activeLink {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .headerNav a::after {
+  background-color: #ffffff;
 }
 
 .profileButton {
@@ -97,4 +146,51 @@
 
 .footer p {
     margin: 0.5rem 0;
+}
+
+/* Theme toggle button styled to align like links */
+.themeButton {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 5px; /* igual que los links */
+}
+
+html[data-theme="dark"] .themeButton {
+  color: #ffffff;
+}
+
+/* Subrayado animado como los links */
+.themeButton::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--brand-blue-900);
+  transition: width 0.3s ease-in-out;
+}
+
+.themeButton:hover::after {
+  width: 100%;
+}
+
+/* En header transparente, el subrayado debe ser blanco */
+.headerTransparent .themeButton::after {
+  background-color: #ffffff;
+}
+
+/* En dark, mantener color blanco y subrayado blanco */
+html[data-theme="dark"] .themeButton {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .themeButton::after {
+  background-color: #ffffff;
 }
